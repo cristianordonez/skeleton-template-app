@@ -31,12 +31,7 @@ This project was built with the following technologies:
 npm install
 ```
 
--  Obtain [Github](https://github.com/) API key and then create .env file (view sample.env in root directory for template):
-
-```env
-GITHUB_API_TOKEN="enter-api-token-here"
-NODE_ENV="development" || "production"
-```
+-  Create a client/dist directory and a index.html file for webpack to output content to.
 
 -  Then, if environment is set to development, run the application like so:
 
@@ -44,7 +39,12 @@ NODE_ENV="development" || "production"
 npm run dev
 ```
 
-This opens a development server in your local browser at port 8080.
+This opens a development server in your local browser at port 3000.
+If seeing errors try killing all nodemon servers:
+
+```bash
+pkill -f nodemon
+```
 
 -  When application is ready for production, have webpack build your bundle and minimize your files:
 
@@ -52,7 +52,7 @@ This opens a development server in your local browser at port 8080.
 npm start
 ```
 
-Then navigate to port 1128 in your browser to view your application.
+Then navigate to port 8080 in your browser to view your application.
 
 -Run unit tests with Jest/React Testing Library:
 

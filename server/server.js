@@ -2,7 +2,7 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-const port = 1128;
+const port = 8080;
 const app = express();
 const compression = require('compression');
 
@@ -25,6 +25,13 @@ app.get('/', (req, res) => {
          version: '1.0.0',
       },
    });
+});
+
+app.get('/next', (req, res) => {
+   res.send('next');
+});
+app.get('/test', (req, res) => {
+   res.send('test');
 });
 
 //START SERVER

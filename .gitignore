@@ -3,3 +3,4 @@
 ./client/dist/
 .env
 ./client/dist
+client/dist

@@ -8,11 +8,20 @@ module.exports = merge(common, {
    mode: 'development',
    devtool: 'inline-source-map',
    devServer: {
+      hot: true,
+      historyApiFallback: true,
+      client: {
+         overlay: {
+            errors: true,
+            warnings: false,
+         },
+      },
       static: DIST_DIR,
       allowedHosts: 'auto',
+      port: 3000,
       proxy: {
          '/api': {
-            target: 'http://localhost:1128',
+            target: 'http://localhost:8080',
             pathRewrite: { '^/api': '' },
          },
       },
