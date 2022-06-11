@@ -3,8 +3,10 @@ const path = require('path');
 const DIST_DIR = path.join(__dirname, '/client/dist');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 const BundleAnalyzerPlugin =
    require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var FriendlyErrorsWebpackPlugin = require('@soda/friendly-errors-webpack-plugin');
 
 let apiHost;
 
@@ -50,6 +52,10 @@ module.exports = {
          template: 'template.html',
       }),
       new MiniCssExtractPlugin(),
+      new webpack.DefinePlugin({
+         __API__: apiHost,
+      }),
+      // new FriendlyErrorsWebpackPlugin(),
       //! uncomment this line to visualize webpack bundles in browser
       // new BundleAnalyzerPlugin(),
    ],

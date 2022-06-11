@@ -9,8 +9,7 @@ const compression = require('compression');
 //MIDDLEWARE
 app.use(compression());
 
-// app.use(express.static(path.join(__dirname, '../client/dist')));
-app.use(express.static(path.join(__dirname, '/client/dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -25,13 +24,6 @@ app.get('/', (req, res) => {
          version: '1.0.0',
       },
    });
-});
-
-app.get('/next', (req, res) => {
-   res.send('next');
-});
-app.get('/test', (req, res) => {
-   res.send('test');
 });
 
 //START SERVER
