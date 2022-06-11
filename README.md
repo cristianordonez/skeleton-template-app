@@ -40,7 +40,7 @@ npm run dev
 ```
 
 This opens a development server in your local browser at port 3000.
-If seeing errors try killing all nodemon servers:
+If you are seeing errors try killing all nodemon servers:
 
 ```bash
 pkill -f nodemon
