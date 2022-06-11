@@ -26,6 +26,7 @@
       "react": "^18.1.0",
       "react-dom": "^18.1.0",
       "react-router-dom": "^6.3.0",
+      "webpack-bundle-analyzer": "^4.5.0",
       "webpack-merge": "^5.8.0"
    },
    "devDependencies": {
@@ -39,8 +40,10 @@
       "css-loader": "^6.7.1",
       "cypress": "^10.1.0",
       "file-loader": "^6.2.0",
+      "html-webpack-plugin": "^5.5.0",
       "jest": "^28.1.1",
       "jest-environment-jsdom": "^28.1.1",
+      "mini-css-extract-plugin": "^2.6.0",
       "prettier": "2.6.2",
       "regenerator-runtime": "^0.13.9",
       "sass": "^1.52.3",

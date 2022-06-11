@@ -7,12 +7,6 @@ module.exports = merge(common, {
    mode: 'production',
    optimization: {
       minimize: true,
-      minimizer: [new TerserPlugin()],
+      minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
    },
-   plugins: [
-      new HtmlWebpackPlugin({
-         title: 'Frontend Capstone',
-         template: 'template.html',
-      }),
-   ],
 });
