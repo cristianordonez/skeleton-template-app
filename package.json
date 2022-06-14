@@ -6,8 +6,8 @@
    "scripts": {
       "test": "jest",
       "cypress": "cypress open",
-      "dev": " nodemon server/server.js & npx webpack serve --open --config webpack.dev.js ",
-      "start": " webpack --config webpack.prod.js & nodemon server/server.js "
+      "dev": "concurrently -n 'webpack,server' -c 'bgBlue.bold,bgGreen.bold' \"npx webpack serve --open --config webpack.dev.js\" \"nodemon server/server.js\"",
+      "start": "concurrently -n 'webpack,server' -c 'bgBlue.bold,bgGreen.bold'  \"webpack --config webpack.prod.js\" \"nodemon server/server.js\" "
    },
    "repository": {
       "type": "git",
@@ -21,6 +21,7 @@
    "homepage": "https://github.com/cristianordonez/skeleton-template-app#readme",
    "dependencies": {
       "body-parser": "^1.20.0",
+      "concurrently": "^7.2.1",
       "css-minimizer-webpack-plugin": "^4.0.0",
       "dotenv": "^16.0.1",
       "express": "^4.18.1",
@@ -34,7 +35,6 @@
       "@babel/core": "^7.18.2",
       "@babel/preset-env": "^7.18.2",
       "@babel/preset-react": "^7.17.12",
-      "@soda/friendly-errors-webpack-plugin": "^1.8.1",
       "@testing-library/react": "^13.3.0",
       "@testing-library/user-event": "^14.2.0",
       "babel-jest": "^28.1.1",
