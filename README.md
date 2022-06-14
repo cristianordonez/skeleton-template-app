@@ -1,6 +1,6 @@
 # Skeleton Template App
 
-Repository template with custom Webpack, prettier, Jest, Cypress, and Babel configuration files.
+Repository template with custom Webpack, Prettier, Jest, Cypress, and Babel configuration files.
 
 ## Features & Usage
 
