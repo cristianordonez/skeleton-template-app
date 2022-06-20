@@ -47,7 +47,7 @@ module.exports = {
    },
    plugins: [
       new HtmlWebpackPlugin({
-         title: 'Frontend Capstone',
+         title: 'Skeleton Template',
          template: 'template.html',
       }),
       new MiniCssExtractPlugin(),

@@ -1,10 +1,13 @@
 # Skeleton Template App
 
-Repository template with custom Webpack, Prettier, Jest, Cypress, and Babel configuration files.
+Repository template with custom webpack, Prettier, Jest, Cypress, Nodemon and Babel configuration files.
 
 ## Features & Usage
 
-## Demo
+-  Create .env file to store environment variables (.env is already present in .gitignore to prevent revealing private keys)
+-  Set NODE_ENV variable to development or production .env to change value of "**API**" that can be used to configure routes for development and production
+-  Make other necessary changes in the babel.config.json, cypress.config.json, jest.config.js, nodemon.json, webpack.dev.js, webpack.prod.js, or the webpack.common.js files
+-  Edit template.html if needed or change the title of your app in webpack.common.js under the HTMLWebpackPlugin options
 
 ## Tech Stack
 
@@ -54,6 +57,8 @@ npm start
 
 Then navigate to port 8080 in your browser to view your application.
 
+## Testing
+
 -Run unit tests with Jest/React Testing Library:
 
 ```bash
@@ -68,5 +73,9 @@ npm run cypress
 
 ## Resources
 
--  [React code-splitting](https://reactjs.org/docs/code-splitting.html)
--  [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+-  [React](https://reactjs.org/)
+-  [webpack](https://webpack.js.org/)
+-  [Babel](https://babeljs.io/)
+-  [Prettier](https://prettier.io/)
+-  [Cypress](https://www.cypress.io/)
+-  [Jest](https://jestjs.io/docs/getting-started)
