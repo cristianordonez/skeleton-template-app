@@ -1,12 +1,12 @@
 # Skeleton Template App
 
-Repository template with custom webpack, Prettier, Jest, Cypress, Nodemon and Babel configuration files.
+Repository template with custom webpack, TypeScript, Prettier, Jest, Cypress, Nodemon and Babel configuration files.
 
 ## Features & Usage
 
 -  Create .env file to store environment variables (.env is already present in .gitignore to prevent revealing private keys)
 -  Set NODE_ENV variable to development or production .env to change value of "**API**" that can be used to configure routes for development and production
--  Make other necessary changes in the babel.config.json, cypress.config.json, jest.config.js, nodemon.json, webpack.dev.js, webpack.prod.js, or the webpack.common.js files
+-  Make other necessary changes in the tsconfig.json, babel.config.json, cypress.config.json, jest.config.js, nodemon.json, webpack.dev.js, webpack.prod.js, or the webpack.common.js files
 -  Edit template.html if needed or change the title of your app in webpack.common.js under the HTMLWebpackPlugin options
 
 ## Tech Stack
@@ -14,6 +14,7 @@ Repository template with custom webpack, Prettier, Jest, Cypress, Nodemon and Ba
 This project was built with the following technologies:
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />

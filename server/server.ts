@@ -1,11 +1,11 @@
 require('dotenv').config();
-const path = require('path');
-const express = require('express');
-const bodyParser = require('body-parser');
+import path from 'path';
+import express from 'express';
 const port = 8080;
-const app = express();
-const compression = require('compression');
+import bodyParser from 'body-parser';
+import compression from 'compression';
 
+const app = express();
 //MIDDLEWARE
 app.use(compression());
 

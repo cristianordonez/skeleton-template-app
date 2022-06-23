@@ -20,7 +20,10 @@ let setupAPI = function () {
 setupAPI();
 
 module.exports = {
-   entry: `${path.join(__dirname, '/client/src')}/index.jsx`,
+   resolve: {
+      extensions: ['.js', '.json', '.ts', '.tsx'],
+   },
+   entry: `${path.join(__dirname, '/client/src')}/index.tsx`,
    output: {
       filename: 'bundle.js',
       path: DIST_DIR,
@@ -29,10 +32,9 @@ module.exports = {
    module: {
       rules: [
          {
-            //enables webpack to handle jsx files
-            test: /\.jsx?$/,
+            test: /\.tsx?$/,
+            use: 'ts-loader',
             exclude: /node_modules/,
-            loader: 'babel-loader',
          },
          {
             test: /.s?css$/,
