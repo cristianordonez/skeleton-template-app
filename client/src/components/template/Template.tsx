@@ -1,12 +1,10 @@
 import React from 'react';
 import './Template.scss';
 
-const Template = () => {
+export const Template = () => {
    return (
       <>
          <p>Hello World</p>
       </>
    );
 };
-
-export default Template;

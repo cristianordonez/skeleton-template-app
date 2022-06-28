@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //ROUTES
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
    res.status(200).json({
       status: 'success',
       data: {

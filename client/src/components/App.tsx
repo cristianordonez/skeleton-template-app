@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Template from './template/Template';
+import { Template } from './template/Template';
 
-const App = () => {
+export const App = () => {
    return (
       <>
          <Routes>
@@ -11,5 +11,3 @@ const App = () => {
       </>
    );
 };
-
-export default App;
