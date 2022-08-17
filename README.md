@@ -36,7 +36,8 @@ npm install
 ```
 
 -  Create a client/dist directory and a index.html file for webpack to output content to.
-
+-  Make sure all express server routes begin with '/api'
+-  Create .env file for all sensitive keys
 -  Then, if environment is set to development, run the application like so:
 
 ```bash
@@ -44,15 +45,12 @@ npm run dev
 ```
 
 This opens a development server in your local browser at port 3000.
-If you are seeing errors try killing all nodemon servers:
+
+-
+-  When application is ready for production, have webpack build your bundle and minimize your files and then start the Express server (NOTE: To allow code-splitting to work when building files, must first change tsconfig.json 'module' variable to 'esnext'. Feel free to change back to 'commonjs' after building files to avoid errors with using import statements instead of require statements for modules.):
 
 ```bash
-pkill -f nodemon
-```
-
--  When application is ready for production, have webpack build your bundle and minimize your files:
-
-```bash
+npm run build
 npm start
 ```
 
@@ -60,10 +58,10 @@ Then navigate to port 8080 in your browser to view your application.
 
 ## Testing
 
--Run unit tests with Jest/React Testing Library:
+-  Run unit tests with Jest/React Testing Library:
 
 ```bash
-npm start
+npm run jest
 ```
 
 -Then run end to end tests with Cypress:
@@ -71,6 +69,11 @@ npm start
 ```bash
 npm run cypress
 ```
+
+-Or run both tests concurrently:
+
+```bash
+npm run test
 
 ## Resources
 
@@ -80,3 +83,4 @@ npm run cypress
 -  [Prettier](https://prettier.io/)
 -  [Cypress](https://www.cypress.io/)
 -  [Jest](https://jestjs.io/docs/getting-started)
+```
