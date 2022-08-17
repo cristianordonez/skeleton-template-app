@@ -26,6 +26,10 @@ app.get('/api', (req, res) => {
    });
 });
 
+app.get('/*', (req, res) => {
+   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
+
 //START SERVER
 app.listen(port, () => {
    console.log(`App listening on port ${port}`);
