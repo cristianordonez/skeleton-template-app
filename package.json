@@ -6,10 +6,11 @@
    "scripts": {
       "lint": "eslint . --ext .ts,.tsx --fix",
       "test": "concurrently -n 'jest,Cypress' -c 'bgGreen.bold,bgBlue.bold' \"npm:jest\" \"npm:cypress-CLI\" ",
-      "cypress-cli": "npx cypress run --record --key 8fe96491-f3d2-4a36-93eb-6cd5688f93e0 ",
       "jest": "jest",
       "cypress": "cypress open",
-      "dev": "concurrently -n 'webpack,server' -c 'bgBlue.bold,bgGreen.bold' \"npx webpack serve --config webpack.dev.js\" \"nodemon server/server.js\"",
+      "cypress-cli": "npx cypress run --record --key 8fe96491-f3d2-4a36-93eb-6cd5688f93e0 ",
+      "dev": "concurrently -n 'server, webpack' -c 'bgGreen.bold,bgBlue.bold' \"nodemon server/server.js\" \"npx webpack serve --config webpack.dev.js\" ",
+      "webpack-dev": "webpack serve --config webpack.dev.js",
       "build": "webpack --config webpack.prod.js",
       "start": "nodemon server/server.js"
    },
