@@ -1,10 +1,10 @@
-require('dotenv').config();
-import path from 'path';
-import express from 'express';
-const port = 8080;
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
+import * as dotenv from 'dotenv';
+import express from 'express';
+import path from 'path';
+dotenv.config();
 
 const app = express();
 //MIDDLEWARE

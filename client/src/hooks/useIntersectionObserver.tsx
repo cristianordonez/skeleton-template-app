@@ -9,12 +9,18 @@ import { useEffect, useState } from 'react';
  * @returns boolean
  */
 
-export const useIntersectionObserver = (reference: any) => {
+export const useIntersectionObserver = (
+   //eslint-disable-next-line
+   reference: IntersectionObserverEntry | any
+) => {
    const [isVisible, setIsVisible] = useState(false);
 
    useEffect(() => {
       //callback function that does something when item becomes visible
-      const handleIntersect = (entries: any, observer: any) => {
+      const handleIntersect = (
+         entries: IntersectionObserverEntry[],
+         observer: IntersectionObserver
+      ) => {
          //entries is array of items being observed
          if (entries[0].isIntersecting) {
             setTimeout(() => {
