@@ -1,4 +1,3 @@
-import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 import * as dotenv from 'dotenv';
@@ -11,8 +10,7 @@ const app = express();
 app.use(cors());
 app.use(compression());
 app.use(express.static(path.join(__dirname, '../client/dist')));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
 
 //ROUTES
 app.get('/api', (req, res) => {
@@ -26,7 +24,15 @@ app.get('/api', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+   //uncomment once index.html has been built so that wait-on package does not error out
+   //// res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+   res.status(200).json({
+      status: 'success',
+      data: {
+         name: 'template',
+         version: '1.0.0',
+      },
+   });
 });
 
 export default app;
