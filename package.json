@@ -12,6 +12,7 @@
       "dev": "concurrently -n 'server, webpack' -c 'bgGreen.bold,bgBlue.bold' \"npm:start\" \"npx wait-on http://localhost:8080 && npm run webpack-dev\" ",
       "webpack-dev": "webpack serve --config webpack.dev.js",
       "build": "webpack --config webpack.prod.js",
+      "build:server": "tsc",
       "start": "nodemon"
    },
    "repository": {
